@@ -1,0 +1,327 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style media="all">/************** BASE CSS **************/
+html, body { margin: 0; padding: 0; }
+body { margin: 0 auto 2rem; padding: 0 2.5rem; max-width: 600px; font-family: Helvetica Neue; font-size: 9.0pt; font-weight: 400; }
+
+h1 { margin-bottom: 0.6rem; font-size: 2rem; }
+h2 { margin: 1.5rem 0 1rem; font-size: 1.5rem; }
+h3 { margin: 1.3rem 0 1rem; font-size: 1.2rem; }
+h4, h5, h6 { font-size: 1rem; }
+
+hr { margin: 2em 0; border: none; height: 3px; }
+
+img { max-width: 100%; }
+p { padding-top: 0.3rem; line-height: 1.5rem; font-size: 0.9rem; }
+
+.img-sandbox-error { padding: 20px 10px; border: solid 1px #ddd; }
+    .img-sandbox-error h2 { margin: 0; text-align: center; font-size: 16px; }
+    .img-sandbox-error p { margin: 0; padding-top: 15px; text-align: center; font-size: 12px; }
+
+table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+    thead th { text-align: left; }
+        thead th[align="center"] { text-align: center; }
+        thead th[align="right"] { text-align: right; }
+    tr { margin: 0; padding: 0; }
+    th, td { margin: 0; padding: .75rem; }
+
+ul, ol { margin: 0; padding: 0 0 0 3rem; }
+  ul ul, ol ol { padding: 0.5rem 0 0.5rem 2rem; }
+ul { list-style-type: disc; }
+  li { padding: 0.15rem 0; font-size: 0.9rem; line-height: 1.4rem; }
+    .checkitem { position: relative; list-style: none; }
+    li p:first-child { margin: 0; padding: 0; }
+
+.checkitem input[type=checkbox] { -webkit-appearance: button; position: absolute; top: 4epx; left: -22px; width: 0.8rem; height: 0.8rem; border: solid 1px #000; border-radius: 2px; }
+
+code { padding: 0 3px; }
+pre { padding-top: 0.3rem; }
+pre code { display: block; padding: 7px; overflow: auto; line-height: 1.4rem; }
+
+blockquote { margin: 1rem 0 1rem 2rem; padding: 0 1rem; }
+    blockquote p { margin: 0; padding-bottom: 1rem; }
+    blockquote p:last-child { padding-bottom: 0.3rem; }
+
+.footnotes { font-size: .9rem; }
+sup a { padding-left: 1px; }
+    .footnotes a, sup a { text-decoration: none; }
+
+.erato-range, .erato-range a { display: inline; margin: 0 !important; padding: 0 !important; width: 0; height: 0; }
+
+/* -----------------------------------------------------------------------------
+   github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+----------------------------------------------------------------------------- */
+
+.hljs {
+  display: block; padding: 0.5rem;
+  color: #333;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #998;
+  font-style: italic
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #099;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula {
+  color: #d14
+}
+
+.hljs-title,
+.hljs-id,
+.coffeescript .hljs-params,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold
+}
+
+.javascript .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.hljs-subst {
+  font-weight: normal
+}
+
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: #008080
+}
+
+.hljs-regexp {
+  color: #009926
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073
+}
+
+.hljs-built_in,
+.lisp .hljs-title,
+.clojure .hljs-built_in {
+  color: #0086b3
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold
+}
+
+.hljs-deletion {
+  background: #fdd
+}
+
+.hljs-addition {
+  background: #dfd
+}
+
+.diff .hljs-change {
+  background: #0086b3
+}
+
+.hljs-chunk {
+  color: #aaa
+}
+
+/************** ERATO LIGHT CSS **************/
+body { color: #333; }
+
+hr { background: #eee; }
+a { color: #0060ff; }
+    a:hover { color: #0843a3; }
+
+thead th { background: #f8f8f8; }
+th, td { border: solid 1px #eee; }
+
+.checkitem input[type=checkbox] { border: solid 1px #ddd; background-color: #fff; }
+    .checkitem input[type=checkbox]:checked { background-color: #eee; }
+
+code { background: #f5f5f4; }
+blockquote { border-left: solid 6px #eee; }
+
+.footnotes { color: #999; }</style><script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script></head><body><div class="erato-range"><a data-range="0,63" name="0,63"></a></div><h1>Техническое задание на разработку прототипа игры на Unity3d</h1>
+
+<div class="erato-range"><a data-range="63,83" name="63,83"></a></div><h3>Общее описание</h3>
+
+<div class="erato-range"><a data-range="83,141" name="83,141"></a></div><p>Игра будет представлять собой тайм-менеджмент симулятор.</p>
+
+<div class="erato-range"><a data-range="141,151" name="141,151"></a></div><p>Аналоги:</p>
+
+<div class="erato-range"><a data-range="151,350" name="151,350"></a></div><ul>
+<li>Дороги Рима<br>
+<a href="http://www.nevosoft.ru/game-Roads-Of-Rome/platform-pc">http://www.nevosoft.ru/game-Roads-Of-Rome/platform-pc</a><br></li>
+<li>Tiny Tale<br>
+<a href="http://www.bigfishgames.com/games/7711/the-tiny-tale/">http://www.bigfishgames.com/games/7711/the-tiny-tale/</a><br></li>
+</ul>
+
+<p>Сеттинг: индустриальная эпоха. Заводы, банки, грузовики.</p>
+
+<div class="erato-range"><a data-range="350,499" name="350,499"></a></div><p>Игра ведется на карте с разметкой X*Y игровых блоков с размером блока ZxZ<br>
+Все координаты в конфигурационном файле указываются в данной размерности.</p>
+
+<div class="erato-range"><a data-range="499,537" name="499,537"></a></div><h3>Необходимый функционал прототипа</h3>
+
+<div class="erato-range"><a data-range="537,669" name="537,669"></a></div><p>Игра загружает уровень из файла. Игрок может кликом на здания добавлять задания, которые выполняют грузовики и возвращаются в штаб</p>
+
+<div class="erato-range"><a data-range="669,705" name="669,705"></a></div><h5>Парсинг уровня из yaml файла</h5>
+
+<div class="erato-range"><a data-range="705,721" name="705,721"></a></div><p>Файл содержит:</p>
+
+<div class="erato-range"><a data-range="721,799" name="721,799"></a></div><ol>
+<li>Координаты штаба игрока.<br></li>
+<li>Координаты и тип прочих зданий<br></li>
+<li>Схема дорог<br></li>
+</ol>
+
+<div class="erato-range"><a data-range="799,807" name="799,807"></a></div><p>Пример</p>
+
+<div class="erato-range"><a data-range="807,816" name="807,816"></a></div><pre><code class="yaml">
+<div class="erato-range"><a data-range="816,998" name="816,998"></a></div>headquarters:
+  x: 1
+  y: 2
+
+buildings:
+  - type: COAL_MINE
+    x: 1
+    y: 2
+  - type: COAL_MINE
+    x: 1
+    y: 2
+roads:
+    - x1: 1
+      y1: 1
+      x2: 1
+      y2: 10
+
+
+<div class="erato-range"><a data-range="998,1190" name="998,1190"></a></div>
+</code></pre>
+
+<h5>Штаб</h5>
+
+<p>Штаб представляет собой здание в котором изначально размещены грузовики игрока, и в которое они возвращаются после выполнения задания. Размещение аналогично остальным зданиям</p>
+
+<div class="erato-range"><a data-range="1190,1392" name="1190,1392"></a></div><h5>Здания</h5>
+
+<p>Здания представляет собой 3d объект размером X*Y (например 3х2). Координаты здания указывают точку привязки к местности. К ней же будет подведена дорога. Например здание:</p>
+
+<pre><code class="txt">###
+#X#
+</code></pre>
+
+<div class="erato-range"><a data-range="1392,1566" name="1392,1566"></a></div><p>С координатами 5,5<br>
+Будет размещено в</p>
+
+<pre><code class="txt">  0123456789  
+0 ..........
+1 ..........
+2 ..........
+3 ..........
+4 ....###...
+5 ....#X#...
+6 ..........
+7 ..........
+8 ..........
+
+<div class="erato-range"><a data-range="1566,1571" name="1566,1571"></a></div></code></pre>
+
+<div class="erato-range"><a data-range="1571,1585" name="1571,1585"></a></div><h5>Дороги</h5>
+
+<div class="erato-range"><a data-range="1585,1697" name="1585,1697"></a></div><p>Дороги представляют собой тайм по которому могут двигаться грузовики. Вне дорог грузовики двигаться не могут. </p>
+
+<div class="erato-range"><a data-range="1697,1833" name="1697,1833"></a></div><p><em>Примечание: в файле конфига уровня каждый элемент списка roads допускает указывает только вертикальное или горизонтальное размещение</em></p>
+
+<div class="erato-range"><a data-range="1833,1924" name="1833,1924"></a></div><p>Тайл дороги должен выбираться автоматически в зависимости от прилегающих к данному тайлу.</p>
+
+<div class="erato-range"><a data-range="1924,2013" name="1924,2013"></a></div><p>Пример из другой игры: <br>
+<img src="http://www.pixeljoint.com/files/icons/full/roads_tiles.png" alt=""></p>
+
+<div class="erato-range"><a data-range="2013,2208" name="2013,2208"></a></div><p>Так-же тайл должен считать точку размещения здания как другой тайл. Например в Transport Tycoon если к прямой дороге поставить Bus Stop, то тайл будет отображаться как у T-образного перекрестка</p>
+
+<div class="erato-range"><a data-range="2208,2270" name="2208,2270"></a></div><p><img src="https://wiki.openttd.org/images/4/48/Tutorial_bus_4.png" alt=""></p>
+
+<div class="erato-range"><a data-range="2270,2287" name="2270,2287"></a></div><h5>Грузовики</h5>
+
+<div class="erato-range"><a data-range="2287,2514" name="2287,2514"></a></div><p>Грузовик представляет собой объект, который выполняет задания игрока. Грузовик может перемещаться только по дороге. В случае если грузовик оказался вне дороги его первоочередная задача — доехать до ближайшего тайла с дорогой.</p>
+
+<div class="erato-range"><a data-range="2514,2558" name="2514,2558"></a></div><p>Грузовик работает по следующему алгоритму.</p>
+
+<div class="erato-range"><a data-range="2558,2859" name="2558,2859"></a></div><ol>
+<li>Если задание не взято  <br>
+
+<ol>
+<li>Если есть задание в очереди заданий  <br>
+
+<ol>
+<li>Взять задание<br></li>
+<li>Начать выполнение<br></li>
+</ol></li>
+<li>Если нет заданий в очереди заданий<br>
+
+<ol>
+<li>Вернуться в штаб<br></li>
+</ol></li>
+</ol></li>
+<li>Если есть задание выполнять его.<br></li>
+<li>Если задание было отменено во время выполнения - вернуться к п.1<br></li>
+</ol>
+
+<div class="erato-range"><a data-range="2859,2874" name="2859,2874"></a></div><h5>Задания</h5>
+
+<div class="erato-range"><a data-range="2874,2983" name="2874,2983"></a></div><p>В прототипе единственный тип задания будет<br>
+1. Доехать до здания<br>
+2. Подождать 3 секунды<br>
+3. Вернуться на базу</p>
+
+<div class="erato-range"><a data-range="2983,3147" name="2983,3147"></a></div><p>Задания добавляются в очередь заданий кликом на здание. После этого здание помечается маркером и до окончания выполнения задания недоступно для добавления нового.</p>
+
+<div class="erato-range"><a data-range="3147,3199" name="3147,3199"></a></div><p>Задание можно отменить кликом правой кнопки мышки.</p>
+
+<div class="erato-range"><a data-range="3199,3201" name="3199,3201"></a></div><div class="erato-range"><a data-range="3201,3204" name="3201,3204"></a></div>
+<script>hljs.initHighlightingOnLoad();</script></body></html>

@@ -1,3 +1,0 @@
-syabro.github.io
-================
-qweqwe
