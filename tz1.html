@@ -193,41 +193,44 @@ blockquote { border-left: solid 6px #eee; }
 
 <div class="erato-range"><a data-range="141,151" name="141,151"></a></div><p>Аналоги:</p>
 
-<div class="erato-range"><a data-range="151,350" name="151,350"></a></div><ul>
+<div class="erato-range"><a data-range="151,552" name="151,552"></a></div><ul>
 <li>Дороги Рима<br>
 <a href="http://www.nevosoft.ru/game-Roads-Of-Rome/platform-pc">http://www.nevosoft.ru/game-Roads-Of-Rome/platform-pc</a><br></li>
 <li>Tiny Tale<br>
 <a href="http://www.bigfishgames.com/games/7711/the-tiny-tale/">http://www.bigfishgames.com/games/7711/the-tiny-tale/</a><br></li>
 </ul>
 
-<p>Сеттинг: индустриальная эпоха. Заводы, банки, грузовики.</p>
+<p>Сеттинг: индустриальная эпоха. Заводы, банки, грузовики.<br>
+Камера ортографическая. Ориентировочный концепт-арт<br>
+<img src="https://m1.behance.net/rendition/modules/147119407/disp/e5cf83bed8fb4502287c75ca028667c4.jpg" alt=""><br>
+<a href="https://www.behance.net/gallery/22019497/Isometrica">https://www.behance.net/gallery/22019497/Isometrica</a></p>
 
-<div class="erato-range"><a data-range="350,499" name="350,499"></a></div><p>Игра ведется на карте с разметкой X*Y игровых блоков с размером блока ZxZ<br>
+<div class="erato-range"><a data-range="552,701" name="552,701"></a></div><p>Игра ведется на карте с разметкой X*Y игровых блоков с размером блока ZxZ<br>
 Все координаты в конфигурационном файле указываются в данной размерности.</p>
 
-<div class="erato-range"><a data-range="499,516" name="499,516"></a></div><h3>Инструменты</h3>
+<div class="erato-range"><a data-range="701,718" name="701,718"></a></div><h3>Инструменты</h3>
 
-<div class="erato-range"><a data-range="516,530" name="516,530"></a></div><p>Unity3D + C#</p>
+<div class="erato-range"><a data-range="718,729" name="718,729"></a></div><p>Unity, C#</p>
 
-<div class="erato-range"><a data-range="530,568" name="530,568"></a></div><h3>Необходимый функционал прототипа</h3>
+<div class="erato-range"><a data-range="729,767" name="729,767"></a></div><h3>Необходимый функционал прототипа</h3>
 
-<div class="erato-range"><a data-range="568,702" name="568,702"></a></div><p>Игра загружает уровень из файла. Игрок может кликом на здания добавлять задания, которые выполняют грузовики и возвращаются на базу.</p>
+<div class="erato-range"><a data-range="767,901" name="767,901"></a></div><p>Игра загружает уровень из файла. Игрок может кликом на здания добавлять задания, которые выполняют грузовики и возвращаются на базу.</p>
 
-<div class="erato-range"><a data-range="702,738" name="702,738"></a></div><h5>Парсинг уровня из yaml файла</h5>
+<div class="erato-range"><a data-range="901,937" name="901,937"></a></div><h5>Парсинг уровня из yaml файла</h5>
 
-<div class="erato-range"><a data-range="738,754" name="738,754"></a></div><p>Файл содержит:</p>
+<div class="erato-range"><a data-range="937,953" name="937,953"></a></div><p>Файл содержит:</p>
 
-<div class="erato-range"><a data-range="754,871" name="754,871"></a></div><ol>
+<div class="erato-range"><a data-range="953,1070" name="953,1070"></a></div><ol>
 <li>Координаты базы игрока.<br></li>
 <li>Координаты и тип прочих зданий<br></li>
 <li>Схема дорог<br></li>
 <li>Количество грузовиков игрока на базе<br></li>
 </ol>
 
-<div class="erato-range"><a data-range="871,879" name="871,879"></a></div><p>Пример</p>
+<div class="erato-range"><a data-range="1070,1078" name="1070,1078"></a></div><p>Пример</p>
 
-<div class="erato-range"><a data-range="879,888" name="879,888"></a></div><pre><code class="yaml">
-<div class="erato-range"><a data-range="888,1073" name="888,1073"></a></div>headquarters:
+<div class="erato-range"><a data-range="1078,1087" name="1078,1087"></a></div><pre><code class="yaml">
+<div class="erato-range"><a data-range="1087,1272" name="1087,1272"></a></div>headquarters:
   x: 1
   y: 2
 
@@ -245,14 +248,14 @@ roads:
       y2: 10
 trucks: 3
 
-<div class="erato-range"><a data-range="1073,1265" name="1073,1265"></a></div>
+<div class="erato-range"><a data-range="1272,1464" name="1272,1464"></a></div>
 </code></pre>
 
 <h5>База</h5>
 
 <p>База представляет собой здание в котором изначально размещены грузовики игрока, и в которое они возвращаются после выполнения задания. Размещение аналогично остальным зданиям</p>
 
-<div class="erato-range"><a data-range="1265,1467" name="1265,1467"></a></div><h5>Здания</h5>
+<div class="erato-range"><a data-range="1464,1666" name="1464,1666"></a></div><h5>Здания</h5>
 
 <p>Здания представляет собой 3d объект размером X*Y (например 3х2). Координаты здания указывают точку привязки к местности. К ней же будет подведена дорога. Например здание:</p>
 
@@ -260,7 +263,7 @@ trucks: 3
 #X#
 </code></pre>
 
-<div class="erato-range"><a data-range="1467,1641" name="1467,1641"></a></div><p>С координатами 5,5<br>
+<div class="erato-range"><a data-range="1666,1840" name="1666,1840"></a></div><p>С координатами 5,5<br>
 Будет размещено в</p>
 
 <pre><code class="txt">  0123456789  
@@ -274,30 +277,30 @@ trucks: 3
 7 ..........
 8 ..........
 
-<div class="erato-range"><a data-range="1641,1646" name="1641,1646"></a></div></code></pre>
+<div class="erato-range"><a data-range="1840,1845" name="1840,1845"></a></div></code></pre>
 
-<div class="erato-range"><a data-range="1646,1660" name="1646,1660"></a></div><h5>Дороги</h5>
+<div class="erato-range"><a data-range="1845,1859" name="1845,1859"></a></div><h5>Дороги</h5>
 
-<div class="erato-range"><a data-range="1660,1772" name="1660,1772"></a></div><p>Дороги представляют собой тайм по которому могут двигаться грузовики. Вне дорог грузовики двигаться не могут. </p>
+<div class="erato-range"><a data-range="1859,1971" name="1859,1971"></a></div><p>Дороги представляют собой тайм по которому могут двигаться грузовики. Вне дорог грузовики двигаться не могут. </p>
 
-<div class="erato-range"><a data-range="1772,1908" name="1772,1908"></a></div><p><em>Примечание: в файле конфига уровня каждый элемент списка roads допускает указывает только вертикальное или горизонтальное размещение</em></p>
+<div class="erato-range"><a data-range="1971,2107" name="1971,2107"></a></div><p><em>Примечание: в файле конфига уровня каждый элемент списка roads допускает указывает только вертикальное или горизонтальное размещение</em></p>
 
-<div class="erato-range"><a data-range="1908,1999" name="1908,1999"></a></div><p>Тайл дороги должен выбираться автоматически в зависимости от прилегающих к данному тайлу.</p>
+<div class="erato-range"><a data-range="2107,2198" name="2107,2198"></a></div><p>Тайл дороги должен выбираться автоматически в зависимости от прилегающих к данному тайлу.</p>
 
-<div class="erato-range"><a data-range="1999,2088" name="1999,2088"></a></div><p>Пример из другой игры: <br>
+<div class="erato-range"><a data-range="2198,2287" name="2198,2287"></a></div><p>Пример из другой игры: <br>
 <img src="http://www.pixeljoint.com/files/icons/full/roads_tiles.png" alt=""></p>
 
-<div class="erato-range"><a data-range="2088,2283" name="2088,2283"></a></div><p>Так-же тайл должен считать точку размещения здания как другой тайл. Например в Transport Tycoon если к прямой дороге поставить Bus Stop, то тайл будет отображаться как у T-образного перекрестка</p>
+<div class="erato-range"><a data-range="2287,2482" name="2287,2482"></a></div><p>Так-же тайл должен считать точку размещения здания как другой тайл. Например в Transport Tycoon если к прямой дороге поставить Bus Stop, то тайл будет отображаться как у T-образного перекрестка</p>
 
-<div class="erato-range"><a data-range="2283,2345" name="2283,2345"></a></div><p><img src="https://wiki.openttd.org/images/4/48/Tutorial_bus_4.png" alt=""></p>
+<div class="erato-range"><a data-range="2482,2544" name="2482,2544"></a></div><p><img src="https://wiki.openttd.org/images/4/48/Tutorial_bus_4.png" alt=""></p>
 
-<div class="erato-range"><a data-range="2345,2362" name="2345,2362"></a></div><h5>Грузовики</h5>
+<div class="erato-range"><a data-range="2544,2561" name="2544,2561"></a></div><h5>Грузовики</h5>
 
-<div class="erato-range"><a data-range="2362,2589" name="2362,2589"></a></div><p>Грузовик представляет собой объект, который выполняет задания игрока. Грузовик может перемещаться только по дороге. В случае если грузовик оказался вне дороги его первоочередная задача — доехать до ближайшего тайла с дорогой.</p>
+<div class="erato-range"><a data-range="2561,2788" name="2561,2788"></a></div><p>Грузовик представляет собой объект, который выполняет задания игрока. Грузовик может перемещаться только по дороге. В случае если грузовик оказался вне дороги его первоочередная задача — доехать до ближайшего тайла с дорогой.</p>
 
-<div class="erato-range"><a data-range="2589,2633" name="2589,2633"></a></div><p>Грузовик работает по следующему алгоритму.</p>
+<div class="erato-range"><a data-range="2788,2832" name="2788,2832"></a></div><p>Грузовик работает по следующему алгоритму.</p>
 
-<div class="erato-range"><a data-range="2633,2935" name="2633,2935"></a></div><ol>
+<div class="erato-range"><a data-range="2832,3134" name="2832,3134"></a></div><ol>
 <li>Если задание не взято  <br>
 
 <ol>
@@ -317,24 +320,24 @@ trucks: 3
 <li>Если задание было отменено во время выполнения - вернуться к п.1<br></li>
 </ol>
 
-<div class="erato-range"><a data-range="2935,2984" name="2935,2984"></a></div><p>Скорость движения грузовика ≈2 тайла в секунду.</p>
+<div class="erato-range"><a data-range="3134,3183" name="3134,3183"></a></div><p>Скорость движения грузовика ≈2 тайла в секунду.</p>
 
-<div class="erato-range"><a data-range="2984,2999" name="2984,2999"></a></div><h5>Задания</h5>
+<div class="erato-range"><a data-range="3183,3198" name="3183,3198"></a></div><h5>Задания</h5>
 
-<div class="erato-range"><a data-range="2999,3108" name="2999,3108"></a></div><p>В прототипе единственный тип задания будет<br>
+<div class="erato-range"><a data-range="3198,3307" name="3198,3307"></a></div><p>В прототипе единственный тип задания будет<br>
 1. Доехать до здания<br>
 2. Подождать 3 секунды<br>
 3. Вернуться на базу</p>
 
-<div class="erato-range"><a data-range="3108,3251" name="3108,3251"></a></div><p><em>Примечание: п.3 Вернуться на базу является частью задания. Таким образом задание считается невыполненным, пока грузовик не вернется на базу</em></p>
+<div class="erato-range"><a data-range="3307,3450" name="3307,3450"></a></div><p><em>Примечание: п.3 Вернуться на базу является частью задания. Таким образом задание считается невыполненным, пока грузовик не вернется на базу</em></p>
 
-<div class="erato-range"><a data-range="3251,3348" name="3251,3348"></a></div><p>Задания добавляются в очередь заданий кликом на здание. После этого здание помечается маркером.</p>
+<div class="erato-range"><a data-range="3450,3547" name="3450,3547"></a></div><p>Задания добавляются в очередь заданий кликом на здание. После этого здание помечается маркером.</p>
 
-<div class="erato-range"><a data-range="3348,3390" name="3348,3390"></a></div><p>Задание можно отменить повторным кликом.</p>
+<div class="erato-range"><a data-range="3547,3589" name="3547,3589"></a></div><p>Задание можно отменить повторным кликом.</p>
 
-<div class="erato-range"><a data-range="3390,3411" name="3390,3411"></a></div><h3>Основные тесты:</h3>
+<div class="erato-range"><a data-range="3589,3610" name="3589,3610"></a></div><h3>Основные тесты:</h3>
 
-<div class="erato-range"><a data-range="3411,4201" name="3411,4201"></a></div><ol>
+<div class="erato-range"><a data-range="3610,4400" name="3610,4400"></a></div><ol>
 <li>Приложение успешно парсит файл и отображает игровое поле<br></li>
 <li>Все типы перекрестков отображаются корректно<br></li>
 <li>Все типы пересечений дороги со зданием отображаются корректно<br></li>
